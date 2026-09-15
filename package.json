@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "test": "node --test test/",
-    "acceptance": "node test/acceptance.browser.mjs"
+    "test": "node --test test/lifting.test.mjs test/api.test.mjs test/acceptance.test.mjs",
+    "acceptance": "node --test test/acceptance.test.mjs"
   },
   "devDependencies": {
     "playwright": "^1.49.0"

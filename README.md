@@ -48,4 +48,4 @@ npm test            # 单元（安全/超载/偏心/夹角/重复/缺数据）+ 
 npm run acceptance  # 仅浏览器验收（Playwright + Chromium）
 ```
 
-浏览器验收需要 Chromium 系统依赖；无 root 权限的环境可执行`scripts/install-browser-deps.sh`（下载 deb 解压到`.browser-sysroot/`，验收脚本自动经`LD_LIBRARY_PATH`加载）。
+测试入口为显式文件列表（`node --test test/lifting.test.mjs test/api.test.mjs test/acceptance.test.mjs`），Node 20 与 Node 22 均可运行（Node 22 不再接受 `node --test test/` 裸目录写法）。浏览器验收需要 Chromium 系统依赖；无 root 权限的环境可执行`scripts/install-browser-deps.sh`（下载 deb 解压到`.browser-sysroot/`，验收脚本自动经`LD_LIBRARY_PATH`加载）。
